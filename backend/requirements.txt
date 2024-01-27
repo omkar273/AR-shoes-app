@@ -1,0 +1,5 @@
+imutils
+# matplotlib==3.3.4
+opencv-python
+scikit-image
+scikit-learn
