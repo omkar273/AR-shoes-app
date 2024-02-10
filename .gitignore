@@ -31,8 +31,8 @@
 .pub/
 /build/
 /unity/
-/android/
-/ios/
+# /android/
+# /ios/
 /server/myproject
 /server/output
 /server/images

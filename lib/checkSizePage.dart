@@ -206,7 +206,8 @@ class _DisplaySizeScreenState extends State<DisplaySizeScreen> {
   }
 
   Future<void> send_request() async {
-    var url = 'http://aadilkhalifa.pythonanywhere.com/image';
+    const String yourIP = "yourIP";
+    var url = 'http://$yourIP:3000';
 
     MultipartRequest request = MultipartRequest('POST', Uri.parse(url));
     MultipartFile file = await MultipartFile.fromPath(
