@@ -6,18 +6,12 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
-
 allprojects {
     repositories {
-        // flatDir {
-        //     dirs "${project(':unityLibrary').projectDir}/libs"
-        // }
-
         google()
         mavenCentral()
     }

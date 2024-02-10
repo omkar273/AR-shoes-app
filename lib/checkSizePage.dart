@@ -1,13 +1,14 @@
 // ignore_for_file: depend_on_referenced_packages, no_leading_underscores_for_local_identifiers, file_names, use_build_context_synchronously, avoid_print, no_logic_in_create_state, non_constant_identifier_names
 
-import 'dart:io';
-import 'package:http/http.dart';
+import 'dart:async';
 import 'dart:convert';
+import 'dart:io';
+
+import 'package:camera/camera.dart';
 // import 'package:dio/dio.dart';
 
 import 'package:flutter/material.dart';
-import 'dart:async';
-import 'package:camera/camera.dart';
+import 'package:http/http.dart';
 import 'package:http_parser/http_parser.dart';
 
 // ignore: must_be_immutable
@@ -206,7 +207,7 @@ class _DisplaySizeScreenState extends State<DisplaySizeScreen> {
   }
 
   Future<void> send_request() async {
-    const String yourIP = "yourIP";
+    const String yourIP = "192.168.43.57";
     var url = 'http://$yourIP:3000';
 
     MultipartRequest request = MultipartRequest('POST', Uri.parse(url));
@@ -375,12 +376,12 @@ class _DisplaySizeScreenState extends State<DisplaySizeScreen> {
                           DataCell(Text(getUK(size_cm).toString())),
                         ],
                       ),
-                      DataRow(
-                        cells: <DataCell>[
-                          const DataCell(Text('cm')),
-                          DataCell(Text(size_cm.toStringAsFixed(2).toString())),
-                        ],
-                      ),
+                      // DataRow(
+                      //   cells: <DataCell>[
+                      //     const DataCell(Text('cm')),
+                      //     DataCell(Text(size_cm.toStringAsFixed(2).toString())),
+                      //   ],
+                      // ),
                     ]),
                     const SizedBox(height: 16.0),
                     ElevatedButton(

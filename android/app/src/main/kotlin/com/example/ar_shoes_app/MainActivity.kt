@@ -1,4 +1,4 @@
-package com.example.virtual_try_on
+package com.example.ar_shoes_app
 
 import io.flutter.embedding.android.FlutterActivity
 
