@@ -219,15 +219,15 @@ class _DisplaySizeScreenState extends State<DisplaySizeScreen> {
     request.files.add(file);
 
     try {
-      StreamedResponse response = await request.send();
-      if (response.statusCode == 200) {
-        Response responseData = await Response.fromStream(response);
+      StreamedResponse? response;
+      if (response?.statusCode == 200) {
+        Response responseData = await Response.fromStream(response!);
         final resJson = json.decode(responseData.body);
         double size_cm = double.parse(resJson['result'].toString() ?? "22.1");
 
         print(size_cm);
       } else {
-        print('Failed with status ${response.statusCode}');
+        print('Failed with status ${response?.statusCode}');
       }
     } catch (e) {
       print('Error sending request: $e');

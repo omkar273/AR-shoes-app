@@ -1,8 +1,11 @@
 // ignore_for_file: library_private_types_in_public_api, must_be_immutable
 
+// flutter build apk --target=lib/main.dart --target-platform=android-arm64
+
 import 'dart:async';
-import 'package:flutter/material.dart';
+
 import 'package:camera/camera.dart';
+import 'package:flutter/material.dart';
 import 'package:virtual_try_on/checkSizePage.dart';
 import 'package:virtual_try_on/theme.dart';
 import 'package:virtual_try_on/virtualTryOnPage.dart';
@@ -11,7 +14,6 @@ List<CameraDescription>? cameras;
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
   cameras = await availableCameras();
   runApp(const CameraApp());
 }
@@ -131,15 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           ),
                           const TextSpan(text: 'experience.'),
                         ],
-                      ))
-                      // child: Text(
-                      //   'A new and improved shopping experience.',
-                      //   style: TextStyle(
-                      //     fontSize: 60,
-                      //     fontWeight: FontWeight.w400,
-                      //   ),
-                      // ),
-                      ),
+                      ))),
                 ),
               ),
               Column(
@@ -147,10 +141,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 children: <Widget>[
                   ElevatedButton(
-                    // style: ElevatedButton.styleFrom(
-                    //   minimumSize: Size.fromHeight(40),
-                    // ),
-
                     onPressed: () {
                       Navigator.push(
                         context,

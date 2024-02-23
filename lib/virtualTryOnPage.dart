@@ -23,9 +23,7 @@ class _VirtualTryOnPageState extends State<VirtualTryOnPage> {
   var selected = 1;
 
   final snapchat_urls = [
-    'https://lens.snapchat.com/4394187f0b4c428c913656befdfcc633?share_id=BBCCa9fseJ4&locale=en-GB',
-    'https://lens.snapchat.com/5f8ef5e0aae94cb08593385483380143?share_id=0A-hipzMDi0&locale=en-GB',
-    'https://lens.snapchat.com/35bc001ea386442ea1b7954527950c8e?share_id=N7eWayFqB1c&locale=en-GB',
+
   ];
 
   @override
